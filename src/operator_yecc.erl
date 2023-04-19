@@ -1,6 +1,9 @@
+%% Copyright (C)
+%% @private
+%% @Author Cam
 -module(operator_yecc).
 -export([parse/1, parse_and_scan/1, format_error/1]).
--file("src/first_yecc.yrl", 25).
+-file("src/operator_yecc.yrl", 28).
 add(A, B) ->
    value_of(A) + value_of(B).
 sub(A, B) ->
@@ -190,7 +193,7 @@ yecctoken2string1(Other) ->
 
 
 
--file("src/first_yecc.erl", 193).
+-file("src/operator_yecc.erl", 196).
 
 -dialyzer({nowarn_function, yeccpars2/7}).
 -compile({nowarn_unused_function,  yeccpars2/7}).
@@ -605,7 +608,7 @@ yeccgoto_root(0, Cat, Ss, Stack, T, Ts, Tzr) ->
 -compile({inline,yeccpars2_2_/1}).
 -dialyzer({nowarn_function, yeccpars2_2_/1}).
 -compile({nowarn_unused_function,  yeccpars2_2_/1}).
--file("src/first_yecc.yrl", 8).
+-file("src/operator_yecc.yrl", 11).
 yeccpars2_2_(__Stack0) ->
  [___1 | __Stack] = __Stack0,
  [begin
@@ -615,7 +618,7 @@ yeccpars2_2_(__Stack0) ->
 -compile({inline,yeccpars2_3_/1}).
 -dialyzer({nowarn_function, yeccpars2_3_/1}).
 -compile({nowarn_unused_function,  yeccpars2_3_/1}).
--file("src/first_yecc.yrl", 5).
+-file("src/operator_yecc.yrl", 8).
 yeccpars2_3_(__Stack0) ->
  [___1 | __Stack] = __Stack0,
  [begin
@@ -625,7 +628,7 @@ yeccpars2_3_(__Stack0) ->
 -compile({inline,yeccpars2_4_/1}).
 -dialyzer({nowarn_function, yeccpars2_4_/1}).
 -compile({nowarn_unused_function,  yeccpars2_4_/1}).
--file("src/first_yecc.yrl", 6).
+-file("src/operator_yecc.yrl", 9).
 yeccpars2_4_(__Stack0) ->
  [___1 | __Stack] = __Stack0,
  [begin
@@ -635,7 +638,7 @@ yeccpars2_4_(__Stack0) ->
 -compile({inline,yeccpars2_5_/1}).
 -dialyzer({nowarn_function, yeccpars2_5_/1}).
 -compile({nowarn_unused_function,  yeccpars2_5_/1}).
--file("src/first_yecc.yrl", 17).
+-file("src/operator_yecc.yrl", 20).
 yeccpars2_5_(__Stack0) ->
  [___1 | __Stack] = __Stack0,
  [begin
@@ -645,7 +648,7 @@ yeccpars2_5_(__Stack0) ->
 -compile({inline,yeccpars2_8_/1}).
 -dialyzer({nowarn_function, yeccpars2_8_/1}).
 -compile({nowarn_unused_function,  yeccpars2_8_/1}).
--file("src/first_yecc.yrl", 19).
+-file("src/operator_yecc.yrl", 22).
 yeccpars2_8_(__Stack0) ->
  [___1 | __Stack] = __Stack0,
  [begin
@@ -655,7 +658,7 @@ yeccpars2_8_(__Stack0) ->
 -compile({inline,yeccpars2_9_/1}).
 -dialyzer({nowarn_function, yeccpars2_9_/1}).
 -compile({nowarn_unused_function,  yeccpars2_9_/1}).
--file("src/first_yecc.yrl", 18).
+-file("src/operator_yecc.yrl", 21).
 yeccpars2_9_(__Stack0) ->
  [___1 | __Stack] = __Stack0,
  [begin
@@ -665,7 +668,7 @@ yeccpars2_9_(__Stack0) ->
 -compile({inline,yeccpars2_12_/1}).
 -dialyzer({nowarn_function, yeccpars2_12_/1}).
 -compile({nowarn_unused_function,  yeccpars2_12_/1}).
--file("src/first_yecc.yrl", 12).
+-file("src/operator_yecc.yrl", 15).
 yeccpars2_12_(__Stack0) ->
  [___2,___1 | __Stack] = __Stack0,
  [begin
@@ -675,7 +678,7 @@ yeccpars2_12_(__Stack0) ->
 -compile({inline,yeccpars2_13_/1}).
 -dialyzer({nowarn_function, yeccpars2_13_/1}).
 -compile({nowarn_unused_function,  yeccpars2_13_/1}).
--file("src/first_yecc.yrl", 10).
+-file("src/operator_yecc.yrl", 13).
 yeccpars2_13_(__Stack0) ->
  [___4,___3,___2,___1 | __Stack] = __Stack0,
  [begin
@@ -685,7 +688,7 @@ yeccpars2_13_(__Stack0) ->
 -compile({inline,yeccpars2_18_/1}).
 -dialyzer({nowarn_function, yeccpars2_18_/1}).
 -compile({nowarn_unused_function,  yeccpars2_18_/1}).
--file("src/first_yecc.yrl", 16).
+-file("src/operator_yecc.yrl", 19).
 yeccpars2_18_(__Stack0) ->
  [___3,___2,___1 | __Stack] = __Stack0,
  [begin
@@ -695,7 +698,7 @@ yeccpars2_18_(__Stack0) ->
 -compile({inline,yeccpars2_19_/1}).
 -dialyzer({nowarn_function, yeccpars2_19_/1}).
 -compile({nowarn_unused_function,  yeccpars2_19_/1}).
--file("src/first_yecc.yrl", 15).
+-file("src/operator_yecc.yrl", 18).
 yeccpars2_19_(__Stack0) ->
  [___3,___2,___1 | __Stack] = __Stack0,
  [begin
@@ -705,7 +708,7 @@ yeccpars2_19_(__Stack0) ->
 -compile({inline,yeccpars2_22_/1}).
 -dialyzer({nowarn_function, yeccpars2_22_/1}).
 -compile({nowarn_unused_function,  yeccpars2_22_/1}).
--file("src/first_yecc.yrl", 10).
+-file("src/operator_yecc.yrl", 13).
 yeccpars2_22_(__Stack0) ->
  [___4,___3,___2,___1 | __Stack] = __Stack0,
  [begin
@@ -715,7 +718,7 @@ yeccpars2_22_(__Stack0) ->
 -compile({inline,yeccpars2_23_/1}).
 -dialyzer({nowarn_function, yeccpars2_23_/1}).
 -compile({nowarn_unused_function,  yeccpars2_23_/1}).
--file("src/first_yecc.yrl", 13).
+-file("src/operator_yecc.yrl", 16).
 yeccpars2_23_(__Stack0) ->
  [___3,___2,___1 | __Stack] = __Stack0,
  [begin
@@ -725,7 +728,7 @@ yeccpars2_23_(__Stack0) ->
 -compile({inline,yeccpars2_24_/1}).
 -dialyzer({nowarn_function, yeccpars2_24_/1}).
 -compile({nowarn_unused_function,  yeccpars2_24_/1}).
--file("src/first_yecc.yrl", 14).
+-file("src/operator_yecc.yrl", 17).
 yeccpars2_24_(__Stack0) ->
  [___3,___2,___1 | __Stack] = __Stack0,
  [begin
@@ -735,7 +738,7 @@ yeccpars2_24_(__Stack0) ->
 -compile({inline,yeccpars2_26_/1}).
 -dialyzer({nowarn_function, yeccpars2_26_/1}).
 -compile({nowarn_unused_function,  yeccpars2_26_/1}).
--file("src/first_yecc.yrl", 11).
+-file("src/operator_yecc.yrl", 14).
 yeccpars2_26_(__Stack0) ->
  [___3,___2,___1 | __Stack] = __Stack0,
  [begin
@@ -745,7 +748,7 @@ yeccpars2_26_(__Stack0) ->
 -compile({inline,yeccpars2_27_/1}).
 -dialyzer({nowarn_function, yeccpars2_27_/1}).
 -compile({nowarn_unused_function,  yeccpars2_27_/1}).
--file("src/first_yecc.yrl", 7).
+-file("src/operator_yecc.yrl", 10).
 yeccpars2_27_(__Stack0) ->
  [___2,___1 | __Stack] = __Stack0,
  [begin
@@ -755,7 +758,7 @@ yeccpars2_27_(__Stack0) ->
 -compile({inline,yeccpars2_28_/1}).
 -dialyzer({nowarn_function, yeccpars2_28_/1}).
 -compile({nowarn_unused_function,  yeccpars2_28_/1}).
--file("src/first_yecc.yrl", 9).
+-file("src/operator_yecc.yrl", 12).
 yeccpars2_28_(__Stack0) ->
  [___2,___1 | __Stack] = __Stack0,
  [begin
@@ -763,4 +766,4 @@ yeccpars2_28_(__Stack0) ->
   end | __Stack].
 
 
--file("src/first_yecc.yrl", 35).
+-file("src/operator_yecc.yrl", 38).

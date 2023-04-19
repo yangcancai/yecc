@@ -1,4 +1,4 @@
-%% a first test leex
+%% a operator leex
 Definitions.
 D = [0-9]+
 Other = [a-z]

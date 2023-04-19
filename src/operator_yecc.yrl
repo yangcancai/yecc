@@ -1,3 +1,6 @@
+Header "%% Copyright (C)"
+"%% @private"
+"%% @Author Cam".
 Nonterminals root result const elements element.
 Terminals number '+' '-' '*' '/' '(' ')' '\n' float.
 
