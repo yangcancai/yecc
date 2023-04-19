@@ -6,13 +6,13 @@
 %% property of the creator of the scanner and is not covered by that
 %% Copyright.
 
--module(first_leex).
+-module(operator_leex).
 
 -export([string/1,string/2,token/2,token/3,tokens/2,tokens/3]).
 -export([format_error/1]).
 
 %% User code. This is placed here to allow extra attributes.
--file("src/first_leex.xrl", 28).
+-file("src/operator_leex.xrl", 28).
 
 -file("/Users/cam/.asdf/installs/erlang/24.2.1/lib/parsetools-2.3.2/include/leexinc.hrl", 14).
 
@@ -305,7 +305,7 @@ adjust_line(T, A, [_|Cs], L) ->
 %% return signal either an unrecognised character or end of current
 %% input.
 
--file("src/first_leex.erl", 307).
+-file("src/operator_leex.erl", 307).
 yystate() -> 13.
 
 yystate(16, Ics, Line, Tlen, _, _) ->
@@ -453,62 +453,62 @@ yyaction(11, _, _, _) ->
 yyaction(_, _, _, _) -> error.
 
 -compile({inline,yyaction_0/2}).
--file("src/first_leex.xrl", 10).
+-file("src/operator_leex.xrl", 10).
 yyaction_0(TokenChars, TokenLine) ->
      { token, { number, TokenLine, list_to_integer (TokenChars) } } .
 
 -compile({inline,yyaction_1/2}).
--file("src/first_leex.xrl", 12).
+-file("src/operator_leex.xrl", 12).
 yyaction_1(TokenChars, TokenLine) ->
      { token, { float, TokenLine, list_to_float (TokenChars) } } .
 
 -compile({inline,yyaction_2/0}).
--file("src/first_leex.xrl", 14).
+-file("src/operator_leex.xrl", 14).
 yyaction_2() ->
      skip_token .
 
 -compile({inline,yyaction_3/0}).
--file("src/first_leex.xrl", 15).
+-file("src/operator_leex.xrl", 15).
 yyaction_3() ->
      skip_token .
 
 -compile({inline,yyaction_4/2}).
--file("src/first_leex.xrl", 16).
+-file("src/operator_leex.xrl", 16).
 yyaction_4(TokenChars, TokenLine) ->
      { token, { '+', TokenLine, TokenChars } } .
 
 -compile({inline,yyaction_5/2}).
--file("src/first_leex.xrl", 17).
+-file("src/operator_leex.xrl", 17).
 yyaction_5(TokenChars, TokenLine) ->
      { token, { '-', TokenLine, TokenChars } } .
 
 -compile({inline,yyaction_6/2}).
--file("src/first_leex.xrl", 18).
+-file("src/operator_leex.xrl", 18).
 yyaction_6(TokenChars, TokenLine) ->
      { token, { '*', TokenLine, TokenChars } } .
 
 -compile({inline,yyaction_7/2}).
--file("src/first_leex.xrl", 19).
+-file("src/operator_leex.xrl", 19).
 yyaction_7(TokenChars, TokenLine) ->
      { token, { '/', TokenLine, TokenChars } } .
 
 -compile({inline,yyaction_8/2}).
--file("src/first_leex.xrl", 20).
+-file("src/operator_leex.xrl", 20).
 yyaction_8(TokenChars, TokenLine) ->
      { token, { '(', TokenLine, TokenChars } } .
 
 -compile({inline,yyaction_9/2}).
--file("src/first_leex.xrl", 21).
+-file("src/operator_leex.xrl", 21).
 yyaction_9(TokenChars, TokenLine) ->
      { token, { ')', TokenLine, TokenChars } } .
 
 -compile({inline,yyaction_10/2}).
--file("src/first_leex.xrl", 24).
+-file("src/operator_leex.xrl", 24).
 yyaction_10(TokenChars, TokenLine) ->
      { token, { '\n', TokenLine, TokenChars } } .
 
 -compile({inline,yyaction_11/0}).
--file("src/first_leex.xrl", 25).
+-file("src/operator_leex.xrl", 25).
 yyaction_11() ->
      skip_token .
 

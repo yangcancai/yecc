@@ -1,4 +1,4 @@
--module(first_yecc).
+-module(operator_yecc).
 -export([parse/1, parse_and_scan/1, format_error/1]).
 -file("src/first_yecc.yrl", 25).
 add(A, B) ->

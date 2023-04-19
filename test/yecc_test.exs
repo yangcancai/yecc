@@ -17,8 +17,8 @@ defmodule YeccTest do
     assert Yecc.hello() == :world
   end
   def check(str, number) do
-    {:ok, token, _ }= :first_leex.string(str)
-    {:ok, number1} = :first_yecc.parse(token)
+    {:ok, token, _ }= :operator_leex.string(str)
+    {:ok, number1} = :operator_yecc.parse(token)
     assert number1 == number
     end
 end
