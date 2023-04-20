@@ -31,7 +31,7 @@ parse_sui(SuiLine) ->
 parse_sui(<<"new-address">> = Method, Args) ->
      #{"cli" => "sui_client", "cmd" => erlang:binary_to_list(Method), "args" => [erlang:binary_to_list(R) || R <- Args]};
 parse_sui(Method, Rest)  ->
- do_parse_sui(Rest, #{"cli" => "sui_client", "cmd" => Method}).
+ do_parse_sui(Rest, #{"cli" => "sui_client", "cmd" => erlang:binary_to_list(Method)}).
 do_parse_sui([], Acc) ->
   Acc;
 do_parse_sui([<<"--", H/binary>> | Rest], Acc) ->
